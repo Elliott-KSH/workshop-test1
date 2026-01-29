@@ -1,9 +1,28 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --alarm-bg-color: #fff;
+    --alarm-border-color: #ccc;
+    --button-bg-color: #4CAF50;
+    --button-text-color: white;
+}
+
+.dark-mode {
+    --bg-color: #333;
+    --text-color: #f0f0f0;
+    --alarm-bg-color: #444;
+    --alarm-border-color: #666;
+    --button-bg-color: #555;
+    --button-text-color: #f0f0f0;
+}
+
 body {
     font-family: sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
     padding-top: 50px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #clock-container {
@@ -21,17 +40,53 @@ body {
 
 #alarm-container input[type="time"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--alarm-border-color);
     border-radius: 5px;
+    background-color: var(--alarm-bg-color);
+    color: var(--text-color);
 }
 
 #alarm-container button {
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     border-radius: 5px;
     cursor: pointer;
+}
+
+#timer-container {
+    margin-top: 50px;
+}
+
+#timer-inputs {
+    margin-bottom: 20px;
+}
+
+#timer-inputs input {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid var(--alarm-border-color);
+    background-color: var(--alarm-bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#timer-controls button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
 }
 
 #alarms-list {
@@ -43,12 +98,79 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--alarm-border-color);
+    background-color: var(--alarm-bg-color);
     border-radius: 5px;
     margin-bottom: 10px;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+#theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .alarm button {
