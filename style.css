@@ -1,110 +1,71 @@
 :root {
     --bg-color: #f0f0f0;
     --text-color: #333;
-    --alarm-bg-color: #fff;
-    --alarm-border-color: #ccc;
-    --button-bg-color: #4CAF50;
-    --button-text-color: white;
+    --container-bg-color: #ffffff;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
 }
 
 .dark-mode {
     --bg-color: #333;
     --text-color: #f0f0f0;
-    --alarm-bg-color: #444;
-    --alarm-border-color: #666;
-    --button-bg-color: #555;
-    --button-text-color: #f0f0f0;
+    --container-bg-color: #444;
+    --button-bg-color: #f0f0f0;
+    --button-text-color: #333;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    text-align: center;
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
-#clock-container {
-    margin-bottom: 50px;
-}
-
-#clock {
-    font-size: 5rem;
-    font-weight: bold;
-}
-
-#alarm-container {
-    margin-bottom: 30px;
-}
-
-#alarm-container input[type="time"] {
-    padding: 10px;
-    border: 1px solid var(--alarm-border-color);
-    border-radius: 5px;
-    background-color: var(--alarm-bg-color);
-    color: var(--text-color);
-}
-
-#alarm-container button {
-    padding: 10px 20px;
-    border: none;
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#timer-container {
-    margin-top: 50px;
-}
-
-#timer-inputs {
-    margin-bottom: 20px;
-}
-
-#timer-inputs input {
-    width: 80px;
-    padding: 10px;
-    border: 1px solid var(--alarm-border-color);
-    background-color: var(--alarm-bg-color);
-    color: var(--text-color);
-    border-radius: 5px;
+.container {
     text-align: center;
+    background-color: var(--container-bg-color);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem;
 }
 
-#timer-display {
-    font-size: 3rem;
+#quote-container {
+    margin-bottom: 2rem;
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#quote-author {
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    text-align: right;
 }
 
-#timer-controls button {
-    padding: 10px 20px;
+#new-quote-button {
+    padding: 1rem 2rem;
     border: none;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-#alarms-list {
-    margin-top: 20px;
-}
-
-.alarm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid var(--alarm-border-color);
-    background-color: var(--alarm-bg-color);
-    border-radius: 5px;
-    margin-bottom: 10px;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+#new-quote-button:hover {
+    transform: scale(1.05);
 }
 
 
@@ -171,13 +132,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-.alarm button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
 }
