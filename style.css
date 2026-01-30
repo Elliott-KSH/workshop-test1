@@ -245,6 +245,46 @@ input:checked + .slider:before {
 
 .contact-form-container button[type="submit"]:hover {
 
+
+
     transform: scale(1.02);
+
+
+
+}
+
+
+
+
+
+
+
+/* Disqus Thread Styles */
+
+
+
+#disqus_thread {
+
+
+
+    width: 100%;
+
+
+
+    max-width: 600px; /* Match the other containers */
+
+
+
+    margin: 2rem;
+
+
+
+    padding: 0 3rem; /* Add some horizontal padding */
+
+
+
+    box-sizing: border-box;
+
+
 
 }
