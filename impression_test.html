@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인상 테스트</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>인상 테스트</h2>
+        <p>사진을 업로드하여 인상을 테스트 해보세요!</p>
+        <input type="file" id="image-upload" accept="image/*">
+        <button id="start-test-button" disabled>테스트 시작</button>
+        <div id="image-preview" style="width: 200px; height: 200px; border: 1px solid black; margin: 10px auto; display: none;"></div>
+        <div id="label-container"></div>
+    </div>
+
+    <script src="impression_test.js"></script>
+</body>
+</html>
