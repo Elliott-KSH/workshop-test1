@@ -96,7 +96,7 @@ shareResultsButton.addEventListener('click', () => {
         const percentage = (item.probability * 100).toFixed(0);
         shareText += `${item.className}: ${percentage}%\n`;
     });
-    shareText += `\n你也来试试吧！-> ${window.location.href}`;
+    shareText += `\n여러분도 한번 해보세요! -> ${window.location.href}`;
 
     navigator.clipboard.writeText(shareText).then(() => {
         const originalText = shareResultsButton.textContent;
