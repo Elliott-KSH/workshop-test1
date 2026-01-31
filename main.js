@@ -1,6 +1,7 @@
 const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
 const newQuoteButton = document.getElementById('new-quote-button');
+const copyQuoteButton = document.getElementById('copy-quote-button');
 const themeToggle = document.getElementById('theme-toggle');
 
 // Theme switcher logic
@@ -68,6 +69,23 @@ function displayQuote() {
     quoteText.textContent = `“${quote}”`;
     quoteAuthor.textContent = `- ${author}`;
 }
+
+copyQuoteButton.addEventListener('click', () => {
+    const quoteToCopy = quoteText.textContent;
+    const authorToCopy = quoteAuthor.textContent;
+    const fullText = `${quoteToCopy} ${authorToCopy}`;
+
+    navigator.clipboard.writeText(fullText).then(() => {
+        // Provide feedback to the user
+        const originalText = copyQuoteButton.textContent;
+        copyQuoteButton.textContent = '복사됨!';
+        setTimeout(() => {
+            copyQuoteButton.textContent = originalText;
+        }, 1500); // Revert back after 1.5 seconds
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+});
 
 newQuoteButton.addEventListener('click', displayQuote);
 

@@ -20,32 +20,20 @@
         </label>
     </div>
     <div class="container">
+        <h1>오늘의 영감을 발견하세요</h1>
         <div id="quote-container">
             <p id="quote-text"></p>
             <p id="quote-author"></p>
         </div>
-        <button id="new-quote-button">새 명언 보기</button>
+        <div class="button-group">
+            <button id="new-quote-button">새로운 영감 얻기</button>
+            <button id="copy-quote-button">인용문 복사</button>
+        </div>
     </div>
 
-
-
-    <div class="contact-form-container">
-        <h2>제휴 문의</h2>
-        <form action="https://formspree.io/f/mkobvkqw" method="POST">
-            <div class="form-group">
-                <label for="name">이름:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">이메일:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">메시지:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">문의 보내기</button>
-        </form>
+    <div class="comment-prompt-container">
+        <h2>이 명언에 대해 어떻게 생각하세요?</h2>
+        <p>다른 사람들과 의견을 나누고 영감을 공유해보세요!</p>
     </div>
 
     <div id="disqus_thread"></div>
