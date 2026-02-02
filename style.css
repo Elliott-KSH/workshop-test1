@@ -35,90 +35,19 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-    text-align: center;
-    background-color: var(--container-bg-color);
-    padding: 2rem 3rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    max-width: 650px;
-    margin: 1rem 2rem;
-    width: 90%;
-}
-
-h1 {
-    font-size: 2rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-}
-
-#quote-container {
-    margin-bottom: 2.5rem;
-    min-height: 120px; /* Prevent layout shift */
-}
-
-#quote-text {
-    font-size: 1.75rem;
-    font-style: italic;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-#quote-author {
-    font-size: 1.25rem;
-    font-weight: 500;
-    text-align: right;
-    color: var(--primary-button-bg);
-}
-
-.button-group {
+#language-and-theme-switchers {
+    position: fixed;
+    top: 20px;
+    right: 30px;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#new-quote-button, #copy-quote-button, #upload-button, #start-test-button, #share-results-button {
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid var(--primary-button-bg);
-    background-color: var(--primary-button-bg);
-    color: var(--primary-button-text);
-}
-
-#new-quote-button:hover, #copy-quote-button:hover, #upload-button:hover, #start-test-button:hover, #share-results-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#copy-quote-button {
-    background-color: var(--secondary-button-bg);
-    color: var(--secondary-button-text);
-    border-color: var(--secondary-button-border);
-}
-
-#start-test-button:disabled {
-    background-color: #ccc;
-    border-color: #ccc;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-
-#copy-quote-button:active {
-    transform: translateY(0);
+    gap: 10px; /* Space between language switcher and theme switcher */
+    z-index: 1001; /* Ensure it's above other elements */
 }
 
 #language-switcher {
-    position: absolute;
-    top: 20px;
-    right: 100px;
     display: flex;
     gap: 0.5rem;
+    align-items: center;
 }
 
 #language-switcher button {
@@ -129,12 +58,16 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#language-switcher button:hover {
+    background-color: var(--primary-button-bg);
+    color: var(--primary-button-text);
 }
 
 #theme-switcher {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    /* No absolute positioning here, handled by parent #language-and-theme-switchers */
 }
 
 .switch {
@@ -337,3 +270,11 @@ input:checked + .slider:before {
     color: var(--primary-button-text);
 }
 
+#quote-container {
+    margin-bottom: 2.5rem;
+    min-height: 300px; /* Prevent layout shift */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
