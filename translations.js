@@ -10,42 +10,56 @@ const translations = {
         "comment_prompt_title": "이 명언에 대해 어떻게 생각하세요?",
         "comment_prompt_subtitle": "다른 사람들과 의견을 나누고 영감을 공유해보세요!",
         "quotes": [
-            {
-                "quote": "유일한 참된 지혜는 당신이 아무것도 모른다는 것을 아는 것입니다.",
-                "author": "소크라테스"
-            },
-            {
-                "quote": "나는 생각한다, 그러므로 나는 존재한다.",
-                "author": "르네 데카르트"
-            },
-            {
-                "quote": "인간은 자유롭도록 저주받았다.",
-                "author": "장 폴 사르트르"
-            },
-            {
-                "quote": "성찰하지 않는 삶은 살 가치가 없다.",
-                "author": "소크라테스"
-            },
-            {
-                "quote": "우리는 우리가 반복적으로 하는 것입니다. 그렇다면 탁월함은 행동이 아니라 습관입니다.",
-                "author": "아리스토텔레스"
-            },
-            {
-                "quote": "신은 죽었다.",
-                "author": "프리드리히 니체"
-            },
-            {
-                "quote": "행복은 이성의 이상이 아니라 상상의 이상이다.",
-                "author": "임마누엘 칸트"
-            },
-            {
-                "quote": "너 자신을 알라.",
-                "author": "소크라테스"
-            },
-            {
-                "quote": "행복은 목표가 아니라, 행복한 삶을 추구하는 과정에서 얻어지는 결과물이다.",
-                "author": "아리스토텔레스"
-            }
+            { "quote": "사람은 반복적으로 행하는 것에 따라 판명되는 존재이다. 따라서 탁월함이란 단일 행동이 아니라 바로 습관이다.", "author": "아리스토텔레스" },
+            { "quote": "인생의 첫 40년은 우리에게 본문을 주고, 다음의 30년은 그것에 대한 주석을 달아준다.", "author": "쇼펜하우어" },
+            { "quote": "초보자는 항상 문제의 결함부터 찾아내지만 고수는 모든 것에서 긍정적인 면을 본다.", "author": "헤겔" },
+            { "quote": "착한 사람에게는 사는 동안이나 죽은 후에도 악이 올 수 없다.", "author": "소크라테스" },
+            { "quote": "너의 욕망을 현실로 끌고 내려와라. 그리고 실로 가능할 때만, 그 욕망의 폭을 넓혀라.", "author": "아리스토텔레스" },
+            { "quote": "좋은 책을 읽는다는 것은 지난 몇 세기 동안 가장 훌륭했던 사람들과 대화하는 것과 같다.", "author": "데카르트" },
+            { "quote": "어느 누구의 지식도 자신의 경험을 넘어설 수는 없다.", "author": "존 로크" },
+            { "quote": "자제는 최대의 승리이다.", "author": "플라톤" },
+            { "quote": "진정한 찬사는 가난한 사람들에게도 주어진다. 그러나 거짓된 찬사는 힘 있는 자들에게만 주어진다.", "author": "세네카" },
+            { "quote": "나쁜 버릇을 밟고 일어선다면, 그 버릇 위에 우리를 위한 사다리를 만들 수 있다.", "author": "어거스틴" },
+            { "quote": "지혜로운 자는 할 말이 있어서 말을 하고 우매한 사람을 말을 해야 하기 때문에 한다.", "author": "플라톤" },
+            { "quote": "진정한 벗은 제2의 자신이다.", "author": "아리스토텔레스" },
+            { "quote": "교육의 뿌리는 쓰지만 그 열매는 달다.", "author": "아리스토텔레스" },
+            { "quote": "우리가 일상에서 행하는 소소한 행동들은 단순해 보이지만 우리 영혼에 큰 영향을 준다.", "author": "토마스 모어" },
+            { "quote": "가지고 있지 않은 것을 원하면서 가지고 있는 것을 낭비하지 마라. 지금 가진 것도 전에는 원하던 것이었음을 잊지 마라.", "author": "에피쿠로스" },
+            { "quote": "사람은 자기가 한 약속들을 지킬 만한 좋은 기억력을 가져야 한다.", "author": "니체" },
+            { "quote": "감정에 너무 치우치지 마라. 너무 민감하면 요동치는 세상을 살아가는 데 아무 도움이 되지 않는다.", "author": "괴테" },
+            { "quote": "욕망의 짐을 너무 많이 짊어지고 있는 사람은 조그마한 기쁨조차 얻지 못한다.", "author": "플라톤" },
+            { "quote": "참된 우정이란 두 신체에 깃든 하나의 영혼이다.", "author": "아리스토텔레스" },
+            { "quote": "허황된 사람은 자신이 사람들에게 혐오감을 주고 있는데도 오히려 모든 사람에게 호감을 사고 있다고 믿으며 흐뭇해한다.", "author": "스피노자" },
+            { "quote": "기회, 본능, 강제, 습관, 이성, 정열, 희망. 이것이 사람이 행동하는 원인들이다.", "author": "아리스토텔레스" },
+            { "quote": "누군가를 기쁘게 하고 싶다면 그의 욕망을 줄여 주는 것이 그의 재산을 늘려 주는 것 보다 훨씬 낫다.", "author": "에피크로스" },
+            { "quote": "보다 힘든 일을 견뎌 낼수록 더 큰 영광이 있다. 훌륭한 비행사는 폭풍우를 겪은 뒤에야 명성을 얻는다.", "author": "에피쿠로스" },
+            { "quote": "친구가 되려고 마음먹는 것은 간단하지만 우정을 이루기까지는 많은 시간이 걸린다.", "author": "아리스토텔레스" },
+            { "quote": "지식은 감각을 통해서 시작되어 이해로 발전하며, 이성적인 판단으로 끝난다. 이성보다 더 높은 것은 없다.", "author": "헤겔" },
+            { "quote": "우리의 이성은 감정에 항복할 때 끝난다.", "author": "루소" },
+            { "quote": "누구든지 화낼 수 있다. 그러나 합당한 대상에게 제대로 된 방식으로 적절하게 화내는 것은 쉬운 일이 아니다.", "author": "아리스토텔레스" },
+            { "quote": "인생은 짧은 이야기와 같다. 중요한 것은 그 길이가 아니라 값어치이다.", "author": "세네카" },
+            { "quote": "별을 보며 사색하는 시간은 영혼을 성숙시키며, 현실 너머의 것을 바라볼 줄 아는 혜안을 가져다 준다.", "author": "플라톤" },
+            { "quote": "건강에 대한 염려는 삶의 최대 장애물이다.", "author": "플라톤" },
+            { "quote": "번영을 누릴 때는 절제를 잊지 말고, 역경에 처했을 때는 신중하라.", "author": "소크라테스" },
+            { "quote": "은혜를 베푸는 자는 그것을 감추고 은혜를 입는 자는 그것을 밝혀라.", "author": "세네카" },
+            { "quote": "남을 사랑하는 아름다운 마음은 얼굴을 아름답게 한다. 허나 남을 원망하는 나쁜 마음은 고운 얼굴을 추악하게 만든다.", "author": "데카르트" },
+            { "quote": "이기고 싶은 마음, 성공하고 싶은 열정, 자신의 잠재력을 발산하고자 하는 충동, 이것들은 모두 탁월함으로 가는 문을 열어 주는 열쇠다.", "author": "공자" },
+            { "quote": "아는 걸로는 부족하다. 응용해야 한다. 마음만으론 부족하다. 실천해야 한다.", "author": "괴테" },
+            { "quote": "내게 맡겨진 일을 잘 해내기 위해서는 스스로를 본래 모습보다 더 위대하다고 여겨야 한다.", "author": "괴테" },
+            { "quote": "우리의 가장 큰 기쁨은 절대 쓰러지지 않는 것이 아니라 쓰러졌을 때마다 다시 일어나는 것에 있다.", "author": "공자" },
+            { "quote": "완전한 금욕이 완벽한 균형보다 쉽다.", "author": "어거스틴" },
+            { "quote": "용기란 두려움과 자신감의 중간점이다.", "author": "아리스토텔레스" },
+            { "quote": "방향성 없이 이것저것 읽는 산만한 독서는 즐거움은 줄지 몰라도 마음을 살찌우지는 않는다.", "author": "세네카" },
+            { "quote": "주어진 문제를 잘 해결하려면 가능한 한 그 문제를 여러 부분으로 나누어라.", "author": "데카르트" },
+            { "quote": "노동이 신체를 굳세게 하듯이, 어려운 일은 정신을 굳건하게 한다.", "author": "세네카" },
+            { "quote": "운명에 불평하지 마라. 자유는 정신에서 비롯된다.", "author": "데카르트" },
+            { "quote": "늦게 일어나서 아침을 짧게 누리지 마라.", "author": "쇼펜하우어" },
+            { "quote": "진정한 사랑은 신뢰다.", "author": "헤겔" },
+            { "quote": "울지 마라, 화내지도 마라, 이해하라.", "author": "스피노자" },
+            { "quote": "좋은 사람으로 평가받고 싶다면 자화자찬하지 마라.", "author": "패리언드로스" },
+            { "quote": "하늘이 치료하지 못할 상처는 없다.", "author": "토마스 모어" },
+            { "quote": "교육은 최고의 노후대책이다.", "author": "아리스토텔레스" },
+            { "quote": "책을 읽는 데 많은 시간을 보내라. 다른 사람이 열심히 노력해서 얻은 것들을 통해 좀 더 쉽게 자신을 개선할 수 있다.", "author": "소크라테스" }
         ]
     },
     "en": {
@@ -59,42 +73,56 @@ const translations = {
         "comment_prompt_title": "What do you think about this quote?",
         "comment_prompt_subtitle": "Share your thoughts with others and spread the inspiration!",
         "quotes": [
-            {
-                "quote": "The only true wisdom is in knowing you know nothing.",
-                "author": "Socrates"
-            },
-            {
-                "quote": "I think, therefore I am.",
-                "author": "René Descartes"
-            },
-            {
-                "quote": "Man is condemned to be free.",
-                "author": "Jean-Paul Sartre"
-            },
-            {
-                "quote": "The unexamined life is not worth living.",
-                "author": "Socrates"
-            },
-            {
-                "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-                "author": "Aristotle"
-            },
-            {
-                "quote": "God is dead.",
-                "author": "Friedrich Nietzsche"
-            },
-            {
-                "quote": "Happiness is not an ideal of reason, but of imagination.",
-                "author": "Immanuel Kant"
-            },
-            {
-                "quote": "Know thyself.",
-                "author": "Socrates"
-            },
-            {
-                "quote": "Happiness is not a goal; it is a by-product.",
-                "author": "Aristotle"
-            }
+            { "quote": "We are what we repeatedly do. Excellence then is not an act but a habit.", "author": "Aristotle" },
+            { "quote": "The first forty years of life give us the text; the next thirty supplies the commentary.", "author": "Schopenhauer" },
+            { "quote": "The learner always begins by finding fault, but the scholar sees the positive merit in everything.", "author": "Hegel" },
+            { "quote": "No evil can befall a good man either in life or death.", "author": "Socrates" },
+            { "quote": "Bring your desires down to your present means. Increase them only when your increased means permit.", "author": "Aristotle" },
+            { "quote": "The reading of all good books is like a conversation with all the finest men of past centuries.", "author": "Descartes" },
+            { "quote": "No man’s knowledge here can go beyond his experience.", "author": "John Locke" },
+            { "quote": "To renunciate is the biggest victory of all.", "author": "Platon" },
+            { "quote": "True praise comes often even to the lowly; false praise to the strong.", "author": "Seneca" },
+            { "quote": "We can make a ladder for ourselves over our vices, if we trample those vices underfoot.", "author": "Augustine" },
+            { "quote": "Wise men talk because they have something to say; fools, because they have to say something.", "author": "Platon" },
+            { "quote": "A friend is a second self.", "author": "Aristotle" },
+            { "quote": "The roots of education are bitter, but the fruit is sweet.", "author": "Aristotle" },
+            { "quote": "The ordinary acts we practice everyday at home are of more importance to the soul than their simplicity might suggest.", "author": "Thomas More" },
+            { "quote": "Do not spoil what you have by desiring what you have not; remember that what you now have was once among the things you only hoped for.", "author": "Epicurus" },
+            { "quote": "A man should have a good memory so that he can keep his promises.", "author": "Nietzsche" },
+            { "quote": "Do not be too emotional. Being too sensitive is of no help in navigating the turbulent world.", "author": "Goethe" },
+            { "quote": "A person who burdens himself with too much desire, leaves little room for even the simplest joys.", "author": "Platon" },
+            { "quote": "True friendship is one soul in different bodies.", "author": "Aristotle" },
+            { "quote": "A vain man may become proud and imagine himself pleasing to all when he is in reality a universal nuisance.", "author": "Spinoza" },
+            { "quote": "All human actions have one or more of these seven causes; chance, nature, compulsion, habit, reason, passion, desire.", "author": "Aristotle" },
+            { "quote": "If you will make a man happy, add not unto his riches but take away from his desires.", "author": "Epicurus" },
+            { "quote": "The greater the obstacle, the more glory in overcoming it. Skillful pilots gain their reputation from storms and tempests.", "author": "Epicurus" },
+            { "quote": "Wishing to be friends is quick work, but friendship is a slow ripening fruit.", "author": "Aristotle" },
+            { "quote": "All our knowledge begins with the senses, proceeds then to the understanding, and ends with reason. There is nothing higher than reason.", "author": "Hegel" },
+            { "quote": "All our reasoning ends in surrender to feeling.", "author": "Rousseau" },
+            { "quote": "Anyone can become angry. But to be angry at the right person, at the right time, for the right reason, and to act on anger in the right way, few have this ability.", "author": "Aristotle" },
+            { "quote": "As it is with a tale, so it is with life: what matters is not how long it is but how good.", "author": "Seneca" },
+            { "quote": "Astronomy compels the soul to look upwards and leads us from this world to another.", "author": "Platon" },
+            { "quote": "Attention to health is life’s greatest hinderance.", "author": "Platon" },
+            { "quote": "Be moderate in prosperity, prudent in adversity.", "author": "Socrates" },
+            { "quote": "Be silent as to services you have rendered, but speak of favors you have received.", "author": "Seneca" },
+            { "quote": "Beautiful feelings like love will turn a face beautiful; ugly feelings like resentment will turn a face ugly.", "author": "Descartes" },
+            { "quote": "The will to win, the desire to succeed, and the drive to reach your full potential; these are the requirements for personal excellence.", "author": "Confucius" },
+            { "quote": "Knowing is not enough; we must apply. Willing is not enough; we must do.", "author": "Goethe" },
+            { "quote": "For a man to achieve all that is demanded of him he must regard himself as greater than he is.", "author": "Goethe" },
+            { "quote": "Our greatest glory is no in never falling, but in rising every time we fall.", "author": "Confucius" },
+            { "quote": "Complete Abstinence is easier than perfect moderation.", "author": "Augustine" },
+            { "quote": "True courage is a balance between the cowardice of fear and the carelessness of confidence.", "author": "Aristotle" },
+            { "quote": "Desultory reading is delightful, but to be beneficial, our reading must be carefully directed.", "author": "Seneca" },
+            { "quote": "Divide each problem into as many parts as is feasible and necessary to solve it.", "author": "Descartes" },
+            { "quote": "Problem solving strengthens the mind, as labour does the body.", "author": "Seneca" },
+            { "quote": "Do not complain to fate, for freedom, we can only find in our minds.", "author": "Descartes" },
+            { "quote": "Do not shorten the morning by getting up late.", "author": "Schopenhauer" },
+            { "quote": "True love is trusting.", "author": "Hegel" },
+            { "quote": "Do not weep; do not wax indignant. Understand.", "author": "Spinoza" },
+            { "quote": "Do you wish people to think well of you? Don’t speak well of yourself.", "author": "Parianderos" },
+            { "quote": "Earth has no sorrow that Heaven cannot heal.", "author": "Thomas More" },
+            { "quote": "Education is the best provision for old age.", "author": "Aristotle" },
+            { "quote": "Employ your time in improving yourself by other men’s writings, so that you shall gain easily what others have labored hard for.", "author": "Socrates" }
         ]
     }
 };

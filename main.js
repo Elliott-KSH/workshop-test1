@@ -53,10 +53,9 @@ copyQuoteButton.addEventListener('click', () => {
 
     navigator.clipboard.writeText(fullText).then(() => {
         // Provide feedback to the user
-        const originalText = copyQuoteButton.textContent;
         copyQuoteButton.textContent = translations[currentLang].copied_text;
         setTimeout(() => {
-            copyQuoteButton.textContent = originalText;
+            copyQuoteButton.textContent = translations[currentLang].copy_quote_button;
         }, 1500); // Revert back after 1.5 seconds
     }).catch(err => {
         console.error('Failed to copy text: ', err);
