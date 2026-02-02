@@ -7,6 +7,7 @@ const langKoButton = document.getElementById('lang-ko');
 const langEnButton = document.getElementById('lang-en');
 
 let currentLang = 'ko';
+let currentQuoteData = null; // Store the currently displayed quote object
 
 // Theme switcher logic
 if (localStorage.getItem('theme') === 'dark') {
@@ -29,21 +30,33 @@ function setLanguage(lang) {
     const elements = document.querySelectorAll('[data-translate-key]');
     elements.forEach(element => {
         const key = element.getAttribute('data-translate-key');
-        element.textContent = translations[lang][key];
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        } else {
+            // Fallback for missing translation - optional: log a warning or use default
+            console.warn(`Missing translation for key: ${key} in language: ${lang}`);
+        }
     });
-    displayQuote();
+    // Only translate the current quote, don't fetch a new one
+    if (currentQuoteData) {
+        displaySpecificQuote(currentQuoteData);
+    }
 }
 
-function getRandomQuote() {
+function getRandomQuoteObject() {
     const quotes = translations[currentLang].quotes;
     const randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
 }
 
-function displayQuote() {
-    const { quote, author } = getRandomQuote();
-    quoteText.textContent = `“${quote}”`;
-    quoteAuthor.textContent = `- ${author}`;
+function displaySpecificQuote(quoteObject) {
+    quoteText.textContent = `“${quoteObject.quote}”`;
+    quoteAuthor.textContent = `- ${quoteObject.author}`;
+}
+
+function displayNewRandomQuote() {
+    currentQuoteData = getRandomQuoteObject();
+    displaySpecificQuote(currentQuoteData);
 }
 
 copyQuoteButton.addEventListener('click', () => {
@@ -62,11 +75,13 @@ copyQuoteButton.addEventListener('click', () => {
     });
 });
 
-newQuoteButton.addEventListener('click', displayQuote);
+newQuoteButton.addEventListener('click', displayNewRandomQuote);
 
 langKoButton.addEventListener('click', () => setLanguage('ko'));
 langEnButton.addEventListener('click', () => setLanguage('en'));
 
 // Display initial quote on page load
+// Set initial language first to ensure translations are loaded before displaying quote
 setLanguage(currentLang);
+displayNewRandomQuote(); // Display a random quote after setting initial language
 
