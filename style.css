@@ -113,6 +113,24 @@ h1 {
     transform: translateY(0);
 }
 
+#language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#language-switcher button {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
 #theme-switcher {
     position: absolute;
     top: 20px;
